@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@500&display=swap&effect=shadow-multiple|fire|neon|anaglyph');
+/* Antes no import da fonte, o caminho da url era css2. Troquei para css sem o número 2 para usar a API. Isso pode ser visto na documentação de fontes do próprio Google Fonts para habilitar os efeitos */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 6em;
+    font-family: 'Poppins', sans-serif;
+}

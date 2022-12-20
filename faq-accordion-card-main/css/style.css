@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    --White: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kumbh', sans-serif;
+    background: linear-gradient(180deg, var(--Soft-violet), var(--Soft-blue));
+    height: 100vh;
+    font-size: 12px;
+}
+
+.main-container {
+    background-color: var(--White);
+    width: 330px;
+    min-height: 536px;
+    margin: 147px auto 30px;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 10px 40px var(--Very-dark-desaturated-blue);
+}
+
+.main-container__s1__image {
+    display: block;
+   width: 240px;
+   margin: -130px auto 0; 
+}
+
+.main-container__s1__image--shadow {
+    content: url(../images/bg-pattern-mobile.svg);
+    width: 240px;
+    margin: -75px auto 0;
+}
+
+.main-container__s2__title {
+    margin: 24px 0 30px;
+    font-size: 2.6em;
+    text-align: center;
+}
+
+.main-container__s2__details {
+    cursor: pointer;
+    position: relative;
+    margin: 16px 0;
+    font-size: 1.05em;
+}
+
+.main-container__s2__details[open] {
+    font-weight: 700;
+}
+
+.main-container__s2__details[open] .main-container__s2__details__icon {
+    transform: rotate(180deg);
+}
+
+.main-container__s2__details__summary {
+    list-style: none;
+    transition: 0.3s;
+}
+
+.main-container__s2__details__summary:hover {
+    color: var(--Soft-red);
+    font-weight: 600;
+}
+
+.main-container__s2__details__paragraph {
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.main-container__s2__details__icon {
+    position: absolute;
+    right: 5px;
+    transition: 0.3s;
+}
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 1044px) {
+    .main-container {
+        display: flex;
+        width: 924px;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-position-x: -536px;
+        background-position-y: -281px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .main-container__s1, 
+    .main-container__s2 {
+        width: 100%;
+    }
+
+    .main-container__s1__image {
+        width: 474px;
+        margin: 67px 0 0 -130px;
+    }
+    .main-container__s1__image--shadow {
+        content: '';
+    }
+    .main-container__s2 {
+        padding: 15px 80px 20px 40px;
+    }
+
+    .main-container__s2__title {
+        text-align: left;
+        margin-bottom: 32px;
+    }
+    .main-container__s2__details {
+        margin: 26px 0;
+    }
+}

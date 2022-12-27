@@ -129,7 +129,7 @@ function count() {
                 clearInterval(secInterval);
 
                 pauseAudio.play();
-                window.navigator.vibrate(200);
+                window.navigator.vibrate(600);
 
                 timePomodoro();
         }
@@ -174,7 +174,7 @@ function timePomodoro() {
                     final.play();
                     localStorage.clear();
                     lofi.pause();
-                    window.navigator.vibrate(200);
+                    window.navigator.vibrate(600);
 
                     timer.style.display = 'none';
                     finalPomodoro.style.display = 'flex';

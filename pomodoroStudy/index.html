@@ -27,18 +27,27 @@
         <div class="inputs-entry">
             <div class="action">
                 <label for="tempo">TEMPO <ion-icon name="hourglass-outline"></ion-icon></label>
-                <input type="number" name="tempo" id="tempo">
+                <input type="number" name="tempo" id="tempo" class=" input-time">
             </div>
             <div class="action">
                 <label for="pausa">PAUSA <ion-icon name="stopwatch-outline"></ion-icon></label>
-                <input type="number" name="pausa" id="pausa">
+                <input type="number" name="pausa" id="pausa" class=" input-time">
             </div>
             <div class="action">
                 <label for="sessoes">SESSÕES <ion-icon name="repeat-outline"></ion-icon></label>
-                <input type="number" name="sessoes" id="sessoes">
+                <input type="number" name="sessoes" id="sessoes" class=" input-time">
             </div>
         </div>
         <button class="btn-start">Iniciar</button>
+    </div>
+
+    <!-- TUTORIAL -->
+    <div class="modal-tutorial">
+        <div class="tutorial">
+            <h3>TUTORIAL</h3>
+            <p class="tutorial-text">O método Pomodoro é simples e dura duas horas. Primeiro, você realiza uma atividade durante 25 minutos. Quando acabar o tempo, descansa 5 minutos. Assim sucessivamente até que complete as duas horas, mas você pode alterar esse tempo.<br><br>O primeiro campo você determina os minutos da sua tarefa, o segundo campo, o tempo de pausa e o último campo, quantas sessões será o pomodoro. Temos uma lista que você pode adicionar suas tarefas e assim que concluir, excluir caso seja útil para você. </p>
+            <ion-icon name="close-circle-outline" class="close"></ion-icon>
+        </div>
     </div>
 
     <!-- TIMER -->
@@ -58,15 +67,34 @@
         <h3 class="title-section"></h3>
     </div>
 
+
     <!-- FINAL -->
     <div class="final-container">
         <div class="final-title">
             <span>Parabéns! <ion-icon name="trophy-outline"></ion-icon></span>
             <p>Você concluiu suas tarefas com sucesso!</p>
         </div>
-        <a href="index.html"><button class="btn-restart"> Reiniciar</button></a>
+        <button class="btn-restart"> Reiniciar</button>
     </div>
 
+     <!-- TODOLIST -->
+     <div class="new-task-container">
+        <input type="text" class="new-task-input" placeholder=" Tarefa para ser feita..."/>
+        <button class="new-task-button">Adicionar</button>
+    </div>
+    
+    <div class="create-tasks"></div>
+
+    <footer class="footer">
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/figueiredo-rodrigo/"><ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
+            <a href="https://github.com/figueiredorodrigo"><ion-icon name="logo-github" class="github"></ion-icon></a>
+        </div>
+        <div class="copy">
+            <p>© Copyright Rodrigo Figueiredo. Todos os direitos reservados</p>
+        </div>
+    </footer>
+<!-- © Copyright Bedimcode. All rights reserved -->
     <!-- ION ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

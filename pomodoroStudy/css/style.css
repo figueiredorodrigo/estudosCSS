@@ -67,13 +67,14 @@ header {
 
 .play {
     display: none;
+    color: #fff;
 }
 
 .timer {
     position: relative;
     margin: 50px auto;
     color: #fff;
-    background: #2d2f41;
+    background: #BA4949;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -110,18 +111,18 @@ header {
 
 .dots {
     font-size: 5em;
-    color: #929292;
+    color: #494949cc;
     user-select: none;
 }
 
 .minutes {
-    background: -webkit-linear-gradient(90deg, #634dff, #5fd4ff);
+    background: -webkit-linear-gradient(90deg, #FFB960, #ff9f43);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .seconds {
-    background: -webkit-linear-gradient(90deg, #ff5e9a, #ffb960);
+    background: -webkit-linear-gradient(90deg, #FFB960, #ff9f43);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -133,7 +134,7 @@ header {
    font-size: 1.3em;
    font-weight: 500;
    margin-bottom: 5px; 
-   background: -webkit-linear-gradient(90deg, #ae4af6, #ff98d1);
+   background: -webkit-linear-gradient(90deg, #FFB960, #ff9f43);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -167,6 +168,7 @@ header {
 label {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #fff;
 }
 
 .input-time {
@@ -174,9 +176,12 @@ label {
     height: 160px !important;
     font-size: 5em !important;
     text-align: center !important;
-    background: #fff;
     border-radius: 50%;
-    border: none;
+    color: rgba(255, 255, 255, 0.966);
+    border: #0e76a8;
+    background: #ffffff2a;
+    box-shadow:  2px 2px 8px #ffffff,
+             -2px -2px 8px #ffffff;
 }
  
  /* Tirar o botão de mais e menos do input tipo number */
@@ -216,14 +221,14 @@ label {
 /* FINAL */
 .final-container {
     display: none;
-    margin:  auto 0;
+    margin:  50px 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 150px;
     width: 425px;
     height: 200px;
-    background-color: #2d2f41;
+    background-color: #BA4949;
     box-shadow: 0 5px 25px rgba(14, 21, 37, 0.8);
     border-radius: 10px;
 }
@@ -277,30 +282,121 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .new-task-input {
     width: 200px;
     height: 40px;
-    border: none;
-}
-
-.new-task-button {
-    width: 100px;
-    height: 40px;
-    border: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 2px solid white;
     border-radius: 5px;
-    background-color: #fff;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.5s;
 }
 
-.new-task-button:hover {
-    background-color: rgb(250, 228, 228);
-    color: #2d2f41;
-    letter-spacing: 0.05em;
+.new-task-input:focus {
+    color: hsl(0, 5%, 20%);
+    background-color: #f0e4e4;
+    outline-color: hsl(0, 67%, 74%);
+    box-shadow: -3px -3px 15px hsl(0, 67%, 74%);
+    transition: .1s;
+    transition-property: box-shadow;
+}
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #cdcdcd;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+}
+.add-btn:hover {
+    width: 120px;
+}
+  
+.add-btn::before,
+.add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: #BA4949;
+}
+  
+.add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+  
+.add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+  
+.icon-btn:focus {
+    outline: none;
+}
+  
+.btn-txt {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+  
+.add-btn:hover::before,
+.add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+  
+.add-btn:hover .btn-txt {
+    opacity: 1;
+}
+  
+.add-icon::after,
+.add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: #BA4949;
+    overflow: hidden;
+}
+  
+.add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+  
+.add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+  
+.add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+  
+.add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
 }
 
 .create-tasks {
@@ -312,7 +408,7 @@ label {
 
 .notes-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 170px);
+    grid-template-columns: repeat(auto-fit, 170px);
     padding: 1.5rem;
 }
 
@@ -322,14 +418,14 @@ label {
     top: 3px;
     font-size: 1.1rem;
     padding: 5px;
-    transition: 0.3s;
     color: #222;
     cursor: pointer;
-    opacity: 1;
+    transition: 0.3s;
 }
 
 .trash:hover {
     color: rgb(255, 0, 0);
+    transform: translateY(-3px);
 }
 
 .notes-container,
@@ -340,28 +436,29 @@ label {
 .notesLi {
     text-decoration:none;
     position: relative;
-    color:#000;
-    background:#ffc;
+    color: #000;
+    background: #FFA54A;
+    display: flex;
     height: 11em;
     width: 12em;
     padding: 1em;
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    margin: 1em;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .notesLi::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 30px;
+    height: 25px;
     top: 0;
     left: 0;
     background: rgba(238, 238, 7, .20);
 }
 
 .notesP {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
     user-select: none;
     text-align: center;
     word-wrap: break-word
@@ -378,6 +475,7 @@ label {
     align-items: center;
     gap: 20px;
     bottom: 10px;
+    color: #fff;
 }
 
 .linkedin,
@@ -392,6 +490,7 @@ label {
 .github:hover {
     color: #0e76a8;
 }
+
 
 
 @media (max-width: 490px) {
@@ -429,12 +528,18 @@ label {
         font-size: 1.2em;
     }
     .notesLi {
-        height: 11em;
-        width: 12em;
+        height: 9em;
+        width: 9em;
+    }
+    .notesP {
+        font-size: 0.8em;
     }
     .copy p {
         font-size: 0.4em;
         text-align: center;
+    }
+    .notes-container {
+        grid-template-columns: repeat(auto-fit, 130px);
     }
     
    
@@ -453,7 +558,6 @@ label {
         flex-direction: column;
         gap: 5px;
     }
-    
     .linkedin,
     .github {
         font-size: 1.4em;

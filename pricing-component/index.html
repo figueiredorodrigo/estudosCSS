@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+
+</head>
+<body>
+  <main class="main-container">
+    <img class="pattern-top" src="images/bg-top.svg" alt="">
+    <header class="header">
+      <h1 class="header-title">Our Pricing</h1>
+      <div class="header-choice">
+        <span class="header-choice-year">Annually</span>
+        <input type="checkbox" id="switch" class="header-switch switch--shadow">
+        <label for="switch"></label>
+        <span class="header-choice-month">Monthly</span>
+      </div>
+    </header>
+    <section class="menu">
+      <div class="menu-prices">
+        <h2 class="menu-title">Basic</h2>
+        <div class="price">
+          <span class="dollar">&dollar;</span>
+          <p class="menu-value" id="basic">199.99</p>
+        </div>
+        <hr class="menu-line">
+        <p class="menu-info">500 GB Storage</p>
+        <hr class="menu-line">
+        <p class="menu-info">2 Users Allowede</p>
+        <hr class="menu-line">
+        <p class="menu-info">Send up to 3 GB</p>
+        <hr class="menu-line">
+        <button class="menu-btn">Learn More</button>
+      </div>
+
+      <div class="menu-prices active">
+        <h2 class="menu-title white">Professional</h2>
+        <div class="price">
+          <span class="dollar white">&dollar;</span>
+          <p class="menu-value white" id="professional" >249.99</p>
+        </div>
+        <hr class="menu-line">
+        <p class="menu-info white">1 TB Storage</p>
+        <hr class="menu-line">
+        <p class="menu-info white">5 Users Allowed</p>
+        <hr class="menu-line">
+        <p class="menu-info white">Send up to 10 GB</p>
+        <hr class="menu-line">
+        <button class="menu-btn invert">Learn More</button>
+      </div>
+
+      <div class="menu-prices">
+        <h2 class="menu-title">Master</h2>
+        <div class="price">
+          <span class="dollar">&dollar;</span>
+          <p class="menu-value" id="master">399.99</p>
+        </div>
+        <hr class="menu-line">
+        <p class="menu-info">2 TB Storage</p>
+        <hr class="menu-line">
+        <p class="menu-info">10 Users Allowed</p>
+        <hr class="menu-line">
+        <p class="menu-info">Send up to 20 GB</p>
+        <hr class="menu-line">
+        <button class="menu-btn">Learn More</button>
+      </div>
+      <img class="pattern-bottom" src="images/bg-bottom.svg" alt="">
+    </section>
+  </main>  
+</body>
+</html>
